@@ -11,6 +11,8 @@ document.addEventListener("click", (e) => {
     li.classList.add("edit");
   }
   if (e.target.dataset.type === "cancel") {
+    const title = li.querySelector(".title").textContent.trim();
+    li.querySelector(".titleEdit").value = title;
     li.classList.remove("edit");
   }
   if (e.target.dataset.type === "save") {
